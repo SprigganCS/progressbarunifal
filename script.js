@@ -24,16 +24,17 @@ setInterval(() => {
 	let beginning = new Date();
 	let elapsedY = beginning - d;
 	//calculate percentage for year
-	let yperc = 13824000*100;
-	yperc = yperc/13910400
+	let yperc = 172800;
+	yperc = yperc/13996800
 	yperc = Math.round(yperc * 10000000) / 100000;
 
 
 
 	ypp.innerHTML = yperc + "%";
 	ybar.style.width = def_with * yperc / 100 + "vw";
-	console.log(beginning);
+	console.log(yperc);
 }, 1000);
+
 
 
 
