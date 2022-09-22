@@ -14,19 +14,18 @@ let root = document.documentElement;
 setInterval(() => {
 	//Set start of year
 	let d = new Date();
-	d.setMonth(8);
-	d.setDate(21);
-	d.setFullYear(2022);
+	d.setMonth(2);
+	d.setDate(1);
+	d.setFullYear(2023);
 	d.setHours(0);
 	d.setMinutes(0);
 	d.setSeconds(0);
 	//calculate seconds since start of Year
 	let beginning = new Date();
-	let elapsedY = beginning - d;
+	let elapsedY = (d-beginning)/1000;
 	//calculate percentage for year
-	let yperc = 172800;
-	yperc = yperc/13996800
-	yperc = Math.round(yperc * 10000000) / 100000;
+	let yperc = elapsedY/13996800;
+	yperc =100- Math.round(yperc * 10000000) / 100000;
 
 
 
